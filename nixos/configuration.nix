@@ -85,7 +85,7 @@
 
   # enable the x11 windowing system.
   services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.displayManager.sddm.enable = true;
 
   # enable dwm
   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
@@ -168,6 +168,7 @@
   environment.systemPackages = with pkgs; [
   curl
   dunst
+  dmenu
   git
   htop
   mesa
