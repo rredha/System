@@ -66,43 +66,68 @@
 
 
   # set your time zone.
-  time.timezone = "africa/algiers";
+  time.timeZone = "africa/algiers";
 
   # select internationalisation properties.
-  i18n.defaultlocale = "fr_fr.utf-8";
+  i18n.defaultLocale = "fr_FR.UTF-8";
 
-  i18n.extralocalesettings = { lc_address = "fr_fr.utf-8"; lc_identification = "fr_fr.utf-8"; lc_measurement = "fr_fr.utf-8";
-    lc_monetary = "fr_fr.utf-8"; lc_name = "fr_fr.utf-8"; lc_numeric = "fr_fr.utf-8"; lc_paper = "fr_fr.utf-8"; lc_telephone =
-      "fr_fr.utf-8"; lc_time = "fr_fr.utf-8";
-  };
+  #  i18n.extraLocaleSettings = {
+  #  lc_address = "fr_FR.UTF-8";
+  #  lc_identification = "fr_FR.UTF-8";
+  #  lc_measurement = "fr_FR.UTF-8";
+  #  lc_monetary = "fr_FR.UTF-8";
+  #  lc_name = "fr_FR.UTF-8";
+  #  lc_numeric = "fr_FR.UTF-8";
+  #  lc_paper = "fr_FR.UTF-8";
+  #  lc_telephone = "fr_FR.UTF-8";
+  #  lc_time = "fr_FR.UTF-8";
+  #};
 
   # enable the x11 windowing system.
   services.xserver.enable = true;
-  services.xserver.displaymanager.lightdm.enable = true;
+  services.xserver.displayManager.lightdm.enable = true;
 
   # enable dwm
-  services.xserver.windowmanager.dwm.package = pkgs.dwm.overrideattrs {
-    src = /home/redha/wrk/repo/dwm;
+  services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
+    conf = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/rredha/dwm/refs/heads/main/config.def.h";
+      hash = "sha256-EUcBLqTNva5KUiYPSykNd6SM9Ui8ZZrkWqQ5Iqbphao=";
+    };
   };
-  services.xserver.windowmanager.dwm.enable = true;
+  services.xserver.windowManager.dwm.enable = true;
 
   # configure keymap in x11
   services.xserver.xkb = { layout = "fr"; variant = "bepo_latin9";
   };
 
   # configure console keymap
-  console.keymap = "fr-bepo";
+  console.keyMap = "fr-bepo";
 
   # enable cups to print documents.
   services.printing.enable = true;
 
   # enable sound.
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32bit = true;
+  # FIXME Seems to be a conflict between pipewire and pulseaudio.
+  #       I dont recall activating pipewire tho...
+  #hardware.pulseaudio.enable = false;
+  #hardware.pulseaudio.support32Bit = true;
 
   # support pulseaudio in all applications
-  nixpkgs.config.pulseaudio = true;
-  hardware.pulseaudio.extraconfig = "load-module module-combine-sink";
+  #nixpkgs.config.pulseaudio = true;
+  #hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
+
+  # Pipewire
+# rtkit is optional but recommended
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true; # if not already enabled
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    # If you want to use JACK applications, uncomment this
+    #jack.enable = true;
+  };
+
 
   # enable touchpad support (enabled default in most desktopmanager).
   services.libinput.enable = true;
