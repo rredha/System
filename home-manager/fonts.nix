@@ -3,9 +3,9 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-      nerd-fonts.jetbrains-mono
-      nerd-fonts.fira-code
-      nerd-fonts.proggy-clean-tt
+      nerdfonts.jetbrains-mono
+      nerdfonts.fira-code
+      nerdfonts.proggy-clean-tt
   ];
 
 }
