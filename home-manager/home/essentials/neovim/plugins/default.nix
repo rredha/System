@@ -12,8 +12,6 @@
   ];
 
   programs.nixvim = {
-
-
     plugins = {
       gitsigns = {
         enable = true;
@@ -25,13 +23,13 @@
 
       nvim-autopairs.enable = true;
 
-      colorizer = {
-        enable = true;
+      #colorizer = {
+      #  enable = true;
         # FIXME Problem with colorizer it says that it doesnt exist ?
         #settings = {
         #  user_default_options.names = false;
         #};
-      };
+      #};
 
       trim = {
         enable = true;
