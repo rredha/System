@@ -3,7 +3,7 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" "JetbrainsMono" "ProggyClean"]; })
+    (nerdfonts.override { fonts = [ "FiraCode" "JetBrainsMono" "ProggyClean"]; })
  ];
 
 }
