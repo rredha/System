@@ -28,7 +28,7 @@
         #  lua_ls.enable = true;
         #  texlab.enable = true;
         #  ccls.enable = true;
-        };
+        #};
       };
     };
   };
