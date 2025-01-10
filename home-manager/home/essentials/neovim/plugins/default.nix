@@ -27,9 +27,10 @@
 
       colorizer = {
         enable = true;
-        settings = {
-          user_default_options.names = false;
-        };
+        # FIXME Problem with colorizer it says that it doesnt exist ?
+        #settings = {
+        #  user_default_options.names = false;
+        #};
       };
 
       trim = {
