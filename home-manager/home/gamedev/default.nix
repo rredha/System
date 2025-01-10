@@ -2,8 +2,8 @@
 
 {
  imports = [
-    ./rider/
-    ./unityhub/
+    ./rider
+    ./unityhub
  ];
 
 }
