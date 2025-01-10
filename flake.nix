@@ -10,7 +10,7 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # Nixvim
-    nixvim.url = "github:nix-community/nixvim";
+    nixvim.url = "github:nix-community/nixvim/nixos-24.11";
     nixvim.inputs.nixpkgs.follows = "nixpkgs";
   };
 
