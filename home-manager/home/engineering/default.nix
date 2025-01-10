@@ -2,10 +2,8 @@
 
 {
  imports = [
-    ./kitty
-    ./orca-slicer
-    ./rider
     ./openscad
+    ./orca-slicer
  ];
 
 }

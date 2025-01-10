@@ -8,13 +8,13 @@
   ...
 }:
 
-  let
-  neovimconfig = import ./nixvim;
-  nvim = inputs.nixvim.legacyPackages.x86_64-linux.makeNixvimWithModule {
-    inherit pkgs;
-    module = neovimconfig;
-  };
- in
+#let
+#  neovimconfig = import ./nixvim;
+#  nvim = inputs.nixvim.legacyPackages.x86_64-linux.makeNixvimWithModule {
+#    inherit pkgs;
+#    module = neovimconfig;
+#  };
+# in
 {
   # You can import other home-manager modules here
   imports = [
@@ -23,11 +23,9 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
-      ./home/cli
-      ./home/gui
-      ./home/fonts.nix
+      ./fonts.nix
+      ./home
    ];
-  ];
 
   nixpkgs = {
     # You can add overlays here

@@ -2,13 +2,10 @@
 {
  imports = [
     ./git
+    ./mpv
     ./bash
-    ./git
-    ./kitty
     ./neovim
     ./tmux
-    ./starship
     ./lynx
-    ./mpv
  ];
 }

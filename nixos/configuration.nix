@@ -1,5 +1,6 @@
 {
   inputs,
+  outputs,
   lib,
   config,
   pkgs,
@@ -7,6 +8,8 @@
 }: {
   # You can import other NixOS modules here
   imports = [
+    # If you want to use modules your own flake exports (from modules/nixos):
+    # outputs.nixosModules.dwm
     # If you want to use modules from other flakes (such as nixos-hardware):
     # inputs.hardware.nixosModules.common-cpu-amd
     # inputs.hardware.nixosModules.common-ssd
@@ -91,10 +94,11 @@
   services.xserver.windowManager.dwm.package = pkgs.dwm.overrideAttrs {
     conf = pkgs.fetchurl {
       url = "https://raw.githubusercontent.com/rredha/dwm/refs/heads/main/config.def.h";
-      hash = "sha256-EUcBLqTNva5KUiYPSykNd6SM9Ui8ZZrkWqQ5Iqbphao=";
+      hash = "sha256-t3JZpEoThJIOUasiJFZDlu75PfHvmJQWJdOWwe7gsmY=";
     };
   };
   services.xserver.windowManager.dwm.enable = true;
+  services.picom.enable = true;
 
   # configure keymap in x11
   services.xserver.xkb = { layout = "fr"; variant = "bepo_latin9";
@@ -166,6 +170,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+  brave
   curl
   dunst
   dmenu
