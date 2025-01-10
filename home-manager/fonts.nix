@@ -2,10 +2,8 @@
 {
   fonts.fontconfig.enable = true;
 
-  home.packages = with pkgs; [
-      nerdfonts.JetbrainsMono
-    #nerdfonts.fira-code
-    #  nerdfonts.proggy-clean-tt
-  ];
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "JetbrainsMono" "ProggyClean"]; })
+ ];
 
 }
