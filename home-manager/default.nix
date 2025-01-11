@@ -39,6 +39,20 @@
       #     patches = [ ./change-hello-to-hi.patch ];
       #   });
       # })
+      (final: prev: {
+        dwm = prev.dwm.overrideAttrs (old: {
+          src = prev.fetchFromGitHub {
+            owner = "rredha";
+            repo = "dwm";
+            rev = "v0.3";
+            sha256 = "";
+          };
+
+        prePatch = ''
+          sed -i "s@/usr/local@\$out@" config.mk
+        '';
+        });
+      })
     ];
     # Configure your nixpkgs instance
     config = {
@@ -89,13 +103,9 @@
       obsidian
       ripgrep
       lynx
-      tree
-      tldr
       starship
       gh
-      glow
       yt-dlp
-      neofetch
       kitty
       mpv
       flameshot
