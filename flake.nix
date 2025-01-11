@@ -62,4 +62,5 @@
         modules = [./home-manager];
       };
     };
+  };
 }
