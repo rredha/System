@@ -41,7 +41,8 @@
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
         modules = [./nixos/configuration.nix];
-    };
+      };
+    }
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
@@ -61,5 +62,4 @@
         modules = [./home-manager];
       };
     };
-  };
 }
