@@ -170,25 +170,27 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-  brave
-  curl
   dunst
   dmenu
-  git
-  htop
-  mesa
-  mesa.drivers
-  nnn
-  openssl
   picom
   rofi
-  sxiv
-  tmux
-  unzip
-  vim
-  w3m
+  curl
   wget
+  w3m
   xclip
+  sxiv
+  git
+  vim
+  htop
+  neofetch
+  tmux
+  nnn
+  unzip
+  tree
+  tldr
+  mesa
+  mesa.drivers
+  openssl
   ];
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.05";
