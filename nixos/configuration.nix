@@ -45,8 +45,8 @@
             rev = "v0.3";
             sha256 = "sha256-LxswP2ieMzOlw7buKH+WAe9apNT7gtBZKeLn3Jxu+pM=";
           };
-      });
-     });
+       });
+     })
     ];
     # Configure your nixpkgs instance
     config = {
