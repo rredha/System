@@ -26,6 +26,10 @@
     overlays = [
       # If you want to use overlays exported from other flakes:
       # neovim-nightly-overlay.overlays.default
+  # prePatch = ''
+  #        sed -i "s@/usr/local@\$out@" config.mk
+  # '';
+  #   });
 
       # Or define it inline, for example:
       # (final: prev: {
@@ -41,12 +45,7 @@
             rev = "v0.3";
             sha256 = "sha256-LxswP2ieMzOlw7buKH+WAe9apNT7gtBZKeLn3Jxu+pM=";
           };
-
-        prePatch = ''
-          sed -i "s@/usr/local@\$out@" config.mk
-        '';
-        });
-      })
+      });
     ];
     # Configure your nixpkgs instance
     config = {
