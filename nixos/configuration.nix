@@ -42,8 +42,8 @@
           src = prev.fetchFromGitHub {
             owner = "rredha";
             repo = "dwm";
-            rev = "v0.3";
-            sha256 = "sha256-LxswP2ieMzOlw7buKH+WAe9apNT7gtBZKeLn3Jxu+pM=";
+            rev = "v0.4";
+            sha256 = "sha256-ZYx/a362gZpvB6T1WlKZ2dk8MOqUbvnm/l0HaUmYxH4=";
           };
        });
      })
