@@ -43,7 +43,7 @@
             owner = "rredha";
             repo = "dwm";
             rev = "v0.4";
-            sha256 = "sha256-ZYx/a362gZpvB6T1WlKZ2dk8MOqUbvnm/l0HaUmYxH4=";
+            sha256 = "0l1n5skkwy5ykrm5ndp7gb1vxpyhc87pc7x38dryn26sfr6jr2sv";
           };
        });
      })
