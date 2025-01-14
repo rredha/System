@@ -12,5 +12,6 @@
       ./tools
       ./gamedev
       ./engineering
+      ./web
    ];
 }

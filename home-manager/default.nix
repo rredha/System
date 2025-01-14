@@ -77,7 +77,6 @@
       unityhub
       orca-slicer
       transmission_4
-      qutebrowser
       brave
       simple-scan
       zotero
