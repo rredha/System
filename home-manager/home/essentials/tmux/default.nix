@@ -14,7 +14,7 @@
       [
         {
           plugin = tmuxPlugins.catppuccin;
-          extraConfig = '' 
+          extraConfig = ''
             set -g @catppuccin_flavour 'frappe'
             set -g @catppuccin_window_tabs_enabled on
             set -g @catppuccin_date_time "%H:%M"
@@ -40,7 +40,7 @@
     extraConfig = ''
       # Status bar up top.
       set-option -g status-position top
-      
+
       # Complete home-manager configuration
       set-window-option -g pane-base-index 1
       set-option -g renumber-windows on

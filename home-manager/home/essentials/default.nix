@@ -1,11 +1,12 @@
 { inputs, config, pkgs, lib, ... }:
 {
  imports = [
-    ./git
-    ./mpv
     ./bash
+    ./git
+    ./lazygit
+    #./lynx
     ./neovim
     ./tmux
-    ./lynx
+    ./yt-dlp
  ];
 }

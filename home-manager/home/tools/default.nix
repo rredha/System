@@ -2,8 +2,13 @@
 
 {
  imports = [
-    ./cli
-    ./gui
+    ./flameshot
+    ./kitty
+    ./mpv
+    ./pavucontrol
+    ./simple-scan
+    ./transmission
+    ./zathura
  ];
 
 }

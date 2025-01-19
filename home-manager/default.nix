@@ -73,28 +73,6 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   # home.packages = with pkgs; [ steam ];
-  home.packages = with pkgs; [
-      unityhub
-      orca-slicer
-      transmission_4
-      brave
-      simple-scan
-      zotero
-      freecad
-      kicad
-      pavucontrol
-      zathura
-      fzf
-      obsidian
-      ripgrep
-      lynx
-      starship
-      gh
-      yt-dlp
-      kitty
-      mpv
-      flameshot
-  ];
 
   home.sessionVariables = {
     EDITOR = "nvim";

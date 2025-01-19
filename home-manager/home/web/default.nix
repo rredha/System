@@ -9,5 +9,7 @@
 {
   imports = [
       ./qutebrowser
+      ./brave
+    #./firefox
    ];
 }

@@ -8,10 +8,17 @@
 
 {
   imports = [
-      ./essentials
-      ./tools
-      ./gamedev
       ./engineering
+      ./essentials
+      ./gamedev
+      ./research
+      ./tools
       ./web
    ];
+
+  home.packages = with pkgs; [
+      fzf
+      ripgrep
+      gh
+  ];
 }

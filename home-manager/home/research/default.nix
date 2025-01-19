@@ -2,8 +2,8 @@
 
 {
  imports = [
-    ./kitty
-    ./starship
+    ./obsidian
+    ./zotero
  ];
 
 }

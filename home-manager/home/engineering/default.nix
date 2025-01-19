@@ -2,6 +2,8 @@
 
 {
  imports = [
+    ./freecad
+    ./kicad
     ./openscad
     ./orca-slicer
  ];

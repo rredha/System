@@ -3,7 +3,7 @@
 {
  imports = [
     ./rider
-    #./unityhub
+    ./unityhub
  ];
 
 }

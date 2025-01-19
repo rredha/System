@@ -1,6 +1,8 @@
 { pkgs, ... }:
 {
-  programs.starship.enable = true;
-  programs.starship.enableBashIntegration = true;
-
+  # Need to integrate lynx
+  #  programs.starship = {
+  #  enable = true;
+  #  enableBashIntegration = true;
+  #};
 }
