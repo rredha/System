@@ -6,6 +6,7 @@
     ./lazygit
     #./lynx
     ./neovim
+    ./starship
     ./tmux
     ./yt-dlp
  ];
