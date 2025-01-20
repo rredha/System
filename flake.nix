@@ -22,25 +22,25 @@
     ...
   } @ inputs: let
     inherit (self) outputs;
+    lib = nixpkgs.lib // home-manager.lib;
   in {
+    inherit lib;
+    nixosModules = import ./modules/nixos;
 
-    # Reusable nixos modules you might want to export
-    # These are usually stuff you would upstream into nixpkgs
-    #    nixosModules = import ./modules/nixos;
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # FIXME replace with your hostname
-      toptop = nixpkgs.lib.nixosSystem {
+      toptop = lib.nixosSystem {
+        modules = [./hosts/toptop];
         specialArgs = {inherit inputs outputs;};
-        # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
       };
 
-      thinkcenter = nixpkgs.lib.nixosSystem {
+      thinkcenter = lib.nixosSystem {
+        modules = [./hosts/thinkcenter];
         specialArgs = {inherit inputs outputs;};
-        # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+      };
+
+      lenovo = lib.nixosSystem {
+        modules = [./hosts/lenovo];
+        specialArgs = {inherit inputs outputs;};
       };
     };
 

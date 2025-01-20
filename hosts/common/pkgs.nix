@@ -1,0 +1,34 @@
+{
+  inputs,
+  outputs,
+  lib,
+  config,
+  pkgs,
+  ...
+}:
+{
+  # List packages installed in system profile. To search, run:
+  environment.systemPackages = with pkgs; [
+  dunst
+  dmenu
+  picom
+  rofi
+  curl
+  wget
+  w3m
+  xclip
+  sxiv
+  git
+  vim
+  htop
+  neofetch
+  tmux
+  nnn
+  unzip
+  tree
+  tldr
+  mesa
+  mesa.drivers
+  openssl
+  ];
+}
