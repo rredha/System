@@ -11,7 +11,11 @@
 {
   imports = [
       ../../fonts.nix
-      ../../pkgs
+      ../../pkgs/web
+      ../../pkgs/essentials
+      ../../pkgs/tools
+      ../../pkgs/engineering
+      ../../pkgs/research
       ./home.nix
    ];
 
