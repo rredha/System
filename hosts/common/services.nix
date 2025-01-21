@@ -14,14 +14,7 @@
   # enable touchpad support (enabled default in most desktopmanager).
   services.libinput.enable = true;
 
-  # enable the x11 windowing system.
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-
-  # enable dwm
-  services.xserver.windowManager.dwm.enable = true;
-  services.picom.enable = true;
-
+  # Pipewire
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true; # if not already enabled

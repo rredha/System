@@ -10,19 +10,16 @@
     ./hardware-configuration.nix
     ../common
     ../../users/redha.nix
+    ../../users/mouna.nix
+    ../../users/tahar.nix
   ];
 
   # Enable networking
-  networking.hostName = "toptop";
+  networking.hostName = "thinkcenter";
   networking.networkmanager.enable = true;
 
   # Enable network manager applet
   programs.nm-applet.enable = true;
-
-  # enable the x11 windowing system.
-  services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
-  services.picom.enable = true;
 
   nixpkgs = {
     config = {
