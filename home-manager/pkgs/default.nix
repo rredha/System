@@ -8,6 +8,8 @@
 
 {
   imports = [
+      ./3d_printer
+
       ./engineering
       ./essentials
       ./gamedev
