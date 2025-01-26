@@ -17,11 +17,12 @@
     };
   };
 
-  environment.systemPackages = with pkgs; [
-    klipper
-    klipper-flash
-    klipper-firmware
-    klipper-genconf
-  ];
+
+  # environment.systemPackages = with pkgs; [
+  #  klipper
+  #  klipper-flash
+  #  klipper-firmware
+  #  klipper-genconf
+  #];
 
 }
