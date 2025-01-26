@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ../common
     ../../users/redha.nix
+    ../../modules/nixos/3d_printer
   ];
 
   # Enable networking
