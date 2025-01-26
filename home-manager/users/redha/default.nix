@@ -16,6 +16,7 @@
       ../../pkgs/tools
       ../../pkgs/engineering
       ../../pkgs/research
+
       ./home.nix
    ];
 
@@ -32,6 +33,12 @@
   programs.home-manager.enable = true;
   programs.git.enable = true;
 
+  # Manually added packages
+  home.packages = with pkgs; [
+      fzf
+      ripgrep
+      gh
+  ];
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
