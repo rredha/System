@@ -3,8 +3,8 @@
 {
  imports = [
     ./klipper
-    ./fluidd
     ./moonraker
+    ./fluidd
  ];
 
   services.avahi = {
@@ -16,11 +16,9 @@
     };
   };
 
-  home.packages = with pkgs; [
-    klipper
-    klipper-flash
+  environment.systemPackages = with pkgs; [
     klipper-firmware
-    klipper-genconf
+    moonraker
   ];
 
 }

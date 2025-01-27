@@ -1,8 +1,8 @@
 { config, lib, ... }:
 
 {
-  services.fuildd =
+  services.fluidd =
   {
       enable = true;
-  }
+  };
 }
