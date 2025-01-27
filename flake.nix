@@ -51,7 +51,10 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
-        modules = [./home-manager/users/redha];
+        modules = [
+            ./home-manager/users/redha
+            ./modules/home-manager/gamedev
+          ];
       };
 
       "redha@thinkcenter" = home-manager.lib.homeManagerConfiguration {
