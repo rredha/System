@@ -4,7 +4,8 @@
  imports = [
     ./klipper
     ./moonraker
-    ./fluidd
+    #./fluidd
+    ./mainsail
  ];
 
   services.avahi = {

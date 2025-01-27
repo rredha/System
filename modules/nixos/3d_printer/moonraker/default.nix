@@ -5,13 +5,12 @@
   {
       user = "redha";
       enable = true;
-      address = "192.168.0.101";
+      address = "0.0.0.0";
       settings =
       {
         authorization = {
           core_domains = [
             "*.local"
-            "*://app.fluidd.xyz"
             "*://my.mainsail.xyz"
           ];
           trusted_clients = [
