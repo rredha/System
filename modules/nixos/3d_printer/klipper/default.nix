@@ -5,15 +5,15 @@
   {
       enable = true;
       user = "redha";
-      group = "3dp";
+      group = "maker";
       logFile = "/var/lib/klipper/klipper.log";
-      firmwares = {
-        mcu = {
-          enable = true;
-          configFile = "/home/redha/docs/creality.cfg";
-          serial = "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0";
-        };
-      };
+      #firmwares = {
+      #  mcu = {
+      #    enable = true;
+      #    configFile = "/home/redha/docs/creality.cfg";
+      #    serial = "/dev/serial/by-id/usb-1a86_USB_Serial-if00-port0";
+      #  };
+      #};
       settings = {
         # Needed for moonraker
         pause_resume = { };
