@@ -8,6 +8,10 @@
     ./mainsail
  ];
 
+  networking = {
+    firewall.allowedTCPPorts = [ 80 7125 ];
+  };
+
   services.avahi = {
     enable = true;
     publish = {
