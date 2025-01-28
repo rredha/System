@@ -29,7 +29,10 @@
 
     nixosConfigurations = {
       toptop = lib.nixosSystem {
-        modules = [./hosts/toptop];
+        modules = [
+            ./hosts/common
+            ./hosts/toptop
+          ];
         specialArgs = {inherit inputs outputs;};
       };
 

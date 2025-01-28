@@ -8,10 +8,12 @@
     [
       inputs.home-manager.nixosModules.home-manager ##
       ./boot.nix
-      ./locale.nix
       ./nix.nix
-      ./openssh.nix
+
+      ./locale.nix
+
       ./pkgs.nix
+      ./openssh.nix
       ./services.nix
     ]
     ++ (builtins.attrValues outputs.nixosModules);
