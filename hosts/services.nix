@@ -8,8 +8,15 @@
 }:
 
 {
-  # enable cups to print documents.
+  # Enable cups to print documents.
   services.printing.enable = true;
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+    addresses = true;
+    workstation = true;
+  };
 
   # enable touchpad support (enabled default in most desktopmanager).
   services.libinput.enable = true;
