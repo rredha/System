@@ -8,10 +8,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ../common
-    ../../users/redha.nix
-    ../../users/mouna.nix
-    ../../users/tahar.nix
+    ../../users/nixos/redha.nix # default user
+    ../../users/nixos/mouna.nix
+    ../../users/nixos/tahar.nix
   ];
 
   # Enable networking

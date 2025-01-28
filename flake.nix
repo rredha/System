@@ -30,14 +30,17 @@
     nixosConfigurations = {
       toptop = lib.nixosSystem {
         modules = [
-            ./hosts/common
+            ./hosts
             ./hosts/toptop
           ];
         specialArgs = {inherit inputs outputs;};
       };
 
       thinkcenter = lib.nixosSystem {
-        modules = [./hosts/thinkcenter];
+        modules = [
+            ./hosts
+            ./hosts/thinkcenter
+          ];
         specialArgs = {inherit inputs outputs;};
       };
 
