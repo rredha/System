@@ -52,7 +52,14 @@
         extraSpecialArgs = {inherit inputs outputs;};
         # > Our main home-manager configuration file <
         modules = [
-            ./home-manager/users/redha
+            ./users/home-manager/redha
+
+            ./modules/home-manager/essentials
+            ./modules/home-manager/tools
+            ./modules/home-manager/web
+
+            ./modules/home-manager/research
+            ./modules/home-manager/engineering
             ./modules/home-manager/gamedev
           ];
       };
